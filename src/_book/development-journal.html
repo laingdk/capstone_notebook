@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Interactive dashboard for edX MOOC instructors</title>
+  <meta name="description" content="Interactive dashboard for edX MOOC instructors">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Interactive dashboard for edX MOOC instructors" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Interactive dashboard for edX MOOC instructors" />
+  
+  
+  
+
+<meta name="author" content="David Laing">
+
+
+<meta name="date" content="2017-06-26">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="r-functions.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Interactive dashboard for edX MOOC instructors</a></li>
+<li class="chapter" data-level="2" data-path="development-journal.html"><a href="development-journal.html"><i class="fa fa-check"></i><b>2</b> Development Journal</a><ul>
+<li class="chapter" data-level="2.1" data-path="development-journal.html"><a href="development-journal.html#week-1"><i class="fa fa-check"></i><b>2.1</b> Week 1</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="development-journal.html"><a href="development-journal.html#tuesday-april-25"><i class="fa fa-check"></i><b>2.1.1</b> Tuesday April 25</a></li>
+<li class="chapter" data-level="2.1.2" data-path="development-journal.html"><a href="development-journal.html#wednesday-april-26"><i class="fa fa-check"></i><b>2.1.2</b> Wednesday April 26</a></li>
+<li class="chapter" data-level="2.1.3" data-path="development-journal.html"><a href="development-journal.html#thursday-april-27"><i class="fa fa-check"></i><b>2.1.3</b> Thursday April 27</a></li>
+<li class="chapter" data-level="2.1.4" data-path="development-journal.html"><a href="development-journal.html#overview-2"><i class="fa fa-check"></i><b>2.1.4</b> Overview:</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="development-journal.html"><a href="development-journal.html#week-2"><i class="fa fa-check"></i><b>2.2</b> Week 2</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="development-journal.html"><a href="development-journal.html#monday-may-1"><i class="fa fa-check"></i><b>2.2.1</b> Monday May 1</a></li>
+<li class="chapter" data-level="2.2.2" data-path="development-journal.html"><a href="development-journal.html#tuesday-may-2"><i class="fa fa-check"></i><b>2.2.2</b> Tuesday May 2</a></li>
+<li class="chapter" data-level="2.2.3" data-path="development-journal.html"><a href="development-journal.html#wednesday-may-3"><i class="fa fa-check"></i><b>2.2.3</b> Wednesday May 3</a></li>
+<li class="chapter" data-level="2.2.4" data-path="development-journal.html"><a href="development-journal.html#friday-may-5"><i class="fa fa-check"></i><b>2.2.4</b> Friday May 5</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="development-journal.html"><a href="development-journal.html#week-3"><i class="fa fa-check"></i><b>2.3</b> Week 3</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="development-journal.html"><a href="development-journal.html#monday-may-8"><i class="fa fa-check"></i><b>2.3.1</b> Monday May 8</a></li>
+<li class="chapter" data-level="2.3.2" data-path="development-journal.html"><a href="development-journal.html#tuesday-may-9"><i class="fa fa-check"></i><b>2.3.2</b> Tuesday May 9</a></li>
+<li class="chapter" data-level="2.3.3" data-path="development-journal.html"><a href="development-journal.html#wednesday-may-10"><i class="fa fa-check"></i><b>2.3.3</b> Wednesday May 10</a></li>
+<li class="chapter" data-level="2.3.4" data-path="development-journal.html"><a href="development-journal.html#thursday-may-11"><i class="fa fa-check"></i><b>2.3.4</b> Thursday May 11</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="development-journal.html"><a href="development-journal.html#week-4"><i class="fa fa-check"></i><b>2.4</b> Week 4</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="development-journal.html"><a href="development-journal.html#monday-may-15"><i class="fa fa-check"></i><b>2.4.1</b> Monday May 15</a></li>
+<li class="chapter" data-level="2.4.2" data-path="development-journal.html"><a href="development-journal.html#wednesday-may-17"><i class="fa fa-check"></i><b>2.4.2</b> Wednesday May 17</a></li>
+<li class="chapter" data-level="2.4.3" data-path="development-journal.html"><a href="development-journal.html#thursday-may-18"><i class="fa fa-check"></i><b>2.4.3</b> Thursday May 18</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="development-journal.html"><a href="development-journal.html#week-5"><i class="fa fa-check"></i><b>2.5</b> Week 5</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="development-journal.html"><a href="development-journal.html#tuesday-may-23"><i class="fa fa-check"></i><b>2.5.1</b> Tuesday May 23</a></li>
+<li class="chapter" data-level="2.5.2" data-path="development-journal.html"><a href="development-journal.html#wednesday-may-24"><i class="fa fa-check"></i><b>2.5.2</b> Wednesday May 24</a></li>
+<li class="chapter" data-level="2.5.3" data-path="development-journal.html"><a href="development-journal.html#thursday-may-25"><i class="fa fa-check"></i><b>2.5.3</b> Thursday May 25</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="development-journal.html"><a href="development-journal.html#week-6"><i class="fa fa-check"></i><b>2.6</b> Week 6</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="development-journal.html"><a href="development-journal.html#monday-may-29"><i class="fa fa-check"></i><b>2.6.1</b> Monday May 29</a></li>
+<li class="chapter" data-level="2.6.2" data-path="development-journal.html"><a href="development-journal.html#tuesday-may-30"><i class="fa fa-check"></i><b>2.6.2</b> Tuesday May 30</a></li>
+<li class="chapter" data-level="2.6.3" data-path="development-journal.html"><a href="development-journal.html#wednesday-may-31"><i class="fa fa-check"></i><b>2.6.3</b> Wednesday May 31</a></li>
+<li class="chapter" data-level="2.6.4" data-path="development-journal.html"><a href="development-journal.html#thursday-june-1"><i class="fa fa-check"></i><b>2.6.4</b> Thursday June 1</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="development-journal.html"><a href="development-journal.html#week-7"><i class="fa fa-check"></i><b>2.7</b> Week 7</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="development-journal.html"><a href="development-journal.html#monday-june-5-and-weekend"><i class="fa fa-check"></i><b>2.7.1</b> Monday June 5 (and weekend)</a></li>
+<li class="chapter" data-level="2.7.2" data-path="development-journal.html"><a href="development-journal.html#tuesday-june-6"><i class="fa fa-check"></i><b>2.7.2</b> Tuesday June 6</a></li>
+<li class="chapter" data-level="2.7.3" data-path="development-journal.html"><a href="development-journal.html#wednesday-june-7"><i class="fa fa-check"></i><b>2.7.3</b> Wednesday June 7</a></li>
+<li class="chapter" data-level="2.7.4" data-path="development-journal.html"><a href="development-journal.html#thursday-june-8"><i class="fa fa-check"></i><b>2.7.4</b> Thursday June 8</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="development-journal.html"><a href="development-journal.html#week-8"><i class="fa fa-check"></i><b>2.8</b> Week 8</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="development-journal.html"><a href="development-journal.html#monday-june-12"><i class="fa fa-check"></i><b>2.8.1</b> Monday June 12</a></li>
+<li class="chapter" data-level="2.8.2" data-path="development-journal.html"><a href="development-journal.html#tuesday-june-13"><i class="fa fa-check"></i><b>2.8.2</b> Tuesday June 13</a></li>
+<li class="chapter" data-level="2.8.3" data-path="development-journal.html"><a href="development-journal.html#wednesday-june-14"><i class="fa fa-check"></i><b>2.8.3</b> Wednesday June 14</a></li>
+<li class="chapter" data-level="2.8.4" data-path="development-journal.html"><a href="development-journal.html#thursday-june-15"><i class="fa fa-check"></i><b>2.8.4</b> Thursday June 15</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="development-journal.html"><a href="development-journal.html#week-8-1"><i class="fa fa-check"></i><b>2.9</b> Week 8</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="development-journal.html"><a href="development-journal.html#monday-june-19-and-weekend"><i class="fa fa-check"></i><b>2.9.1</b> Monday June 19 (and weekend)</a></li>
+<li class="chapter" data-level="2.9.2" data-path="development-journal.html"><a href="development-journal.html#tuesday-june-20"><i class="fa fa-check"></i><b>2.9.2</b> Tuesday June 20</a></li>
+<li class="chapter" data-level="2.9.3" data-path="development-journal.html"><a href="development-journal.html#wednesday-june-21"><i class="fa fa-check"></i><b>2.9.3</b> Wednesday June 21</a></li>
+<li class="chapter" data-level="2.9.4" data-path="development-journal.html"><a href="development-journal.html#thursday-june-22"><i class="fa fa-check"></i><b>2.9.4</b> Thursday June 22</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="development-journal.html"><a href="development-journal.html#week-9"><i class="fa fa-check"></i><b>2.10</b> Week 9</a><ul>
+<li class="chapter" data-level="2.10.1" data-path="development-journal.html"><a href="development-journal.html#monday-june-26"><i class="fa fa-check"></i><b>2.10.1</b> Monday June 26</a></li>
+<li class="chapter" data-level="2.10.2" data-path="development-journal.html"><a href="development-journal.html#tuesday-june-27"><i class="fa fa-check"></i><b>2.10.2</b> Tuesday June 27</a></li>
+<li class="chapter" data-level="2.10.3" data-path="development-journal.html"><a href="development-journal.html#wednesday-june-28"><i class="fa fa-check"></i><b>2.10.3</b> Wednesday June 28</a></li>
+<li class="chapter" data-level="2.10.4" data-path="development-journal.html"><a href="development-journal.html#thursday-june-29"><i class="fa fa-check"></i><b>2.10.4</b> Thursday June 29</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r-functions.html"><a href="r-functions.html"><i class="fa fa-check"></i><b>3</b> R Functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="r-functions.html"><a href="r-functions.html#wrangling-functions"><i class="fa fa-check"></i><b>3.1</b> Wrangling Functions</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="r-functions.html"><a href="r-functions.html#get_activity_levels"><i class="fa fa-check"></i><b>3.1.1</b> <code>get_activity_levels</code></a></li>
+<li class="chapter" data-level="3.1.2" data-path="r-functions.html"><a href="r-functions.html#get_discussion_vars_json"><i class="fa fa-check"></i><b>3.1.2</b> <code>get_discussion_vars_json</code></a></li>
+<li class="chapter" data-level="3.1.3" data-path="r-functions.html"><a href="r-functions.html#get_discussion_vars_xml"><i class="fa fa-check"></i><b>3.1.3</b> <code>get_discussion_vars_xml</code></a></li>
+<li class="chapter" data-level="3.1.4" data-path="r-functions.html"><a href="r-functions.html#infer_post_subcategories"><i class="fa fa-check"></i><b>3.1.4</b> <code>infer_post_subcategories</code></a></li>
+<li class="chapter" data-level="3.1.5" data-path="r-functions.html"><a href="r-functions.html#prepare_json"><i class="fa fa-check"></i><b>3.1.5</b> <code>prepare_json</code></a></li>
+<li class="chapter" data-level="3.1.6" data-path="r-functions.html"><a href="r-functions.html#prepare_posts"><i class="fa fa-check"></i><b>3.1.6</b> <code>prepare_posts</code></a></li>
+<li class="chapter" data-level="3.1.7" data-path="r-functions.html"><a href="r-functions.html#prepare_searches"><i class="fa fa-check"></i><b>3.1.7</b> <code>prepare_searches</code></a></li>
+<li class="chapter" data-level="3.1.8" data-path="r-functions.html"><a href="r-functions.html#prepare_views"><i class="fa fa-check"></i><b>3.1.8</b> <code>prepare_views</code></a></li>
+<li class="chapter" data-level="3.1.9" data-path="r-functions.html"><a href="r-functions.html#prepare_words"><i class="fa fa-check"></i><b>3.1.9</b> <code>prepare_words</code></a></li>
+<li class="chapter" data-level="3.1.10" data-path="r-functions.html"><a href="r-functions.html#prepare_xml"><i class="fa fa-check"></i><b>3.1.10</b> <code>prepare_xml</code></a></li>
+<li class="chapter" data-level="3.1.11" data-path="r-functions.html"><a href="r-functions.html#wrangle_forum"><i class="fa fa-check"></i><b>3.1.11</b> <code>wrangle_forum</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="r-functions.html"><a href="r-functions.html#server-functions"><i class="fa fa-check"></i><b>3.2</b> Server Functions</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="r-functions.html"><a href="r-functions.html#apply_forum_filters"><i class="fa fa-check"></i><b>3.2.1</b> <code>apply_forum_filters</code></a></li>
+<li class="chapter" data-level="3.2.2" data-path="r-functions.html"><a href="r-functions.html#calculate_forum_searches"><i class="fa fa-check"></i><b>3.2.2</b> <code>calculate_forum_searches</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="r-functions.html"><a href="r-functions.html#count_authors"><i class="fa fa-check"></i><b>3.2.3</b> <code>count_authors</code></a></li>
+<li class="chapter" data-level="3.2.4" data-path="r-functions.html"><a href="r-functions.html#count_posts"><i class="fa fa-check"></i><b>3.2.4</b> <code>count_posts</code></a></li>
+<li class="chapter" data-level="3.2.5" data-path="r-functions.html"><a href="r-functions.html#count_views"><i class="fa fa-check"></i><b>3.2.5</b> <code>count_views</code></a></li>
+<li class="chapter" data-level="3.2.6" data-path="r-functions.html"><a href="r-functions.html#filter_forum_elements"><i class="fa fa-check"></i><b>3.2.6</b> <code>filter_forum_elements</code></a></li>
+<li class="chapter" data-level="3.2.7" data-path="r-functions.html"><a href="r-functions.html#filter_wordcloud_data"><i class="fa fa-check"></i><b>3.2.7</b> <code>filter_wordcloud_data</code></a></li>
+<li class="chapter" data-level="3.2.8" data-path="r-functions.html"><a href="r-functions.html#gather_post_types"><i class="fa fa-check"></i><b>3.2.8</b> <code>gather_post_types</code></a></li>
+<li class="chapter" data-level="3.2.9" data-path="r-functions.html"><a href="r-functions.html#get_author_count"><i class="fa fa-check"></i><b>3.2.9</b> <code>get_author_count</code></a></li>
+<li class="chapter" data-level="3.2.10" data-path="r-functions.html"><a href="r-functions.html#get_forum_threads"><i class="fa fa-check"></i><b>3.2.10</b> <code>get_forum_threads</code></a></li>
+<li class="chapter" data-level="3.2.11" data-path="r-functions.html"><a href="r-functions.html#get_label_lengths"><i class="fa fa-check"></i><b>3.2.11</b> <code>get_label_lengths</code></a></li>
+<li class="chapter" data-level="3.2.12" data-path="r-functions.html"><a href="r-functions.html#get_subcategory_options"><i class="fa fa-check"></i><b>3.2.12</b> <code>get_subcategory_options</code></a></li>
+<li class="chapter" data-level="3.2.13" data-path="r-functions.html"><a href="r-functions.html#get_target_word_counts"><i class="fa fa-check"></i><b>3.2.13</b> <code>get_target_word_counts</code></a></li>
+<li class="chapter" data-level="3.2.14" data-path="r-functions.html"><a href="r-functions.html#get_wordcloud_data"><i class="fa fa-check"></i><b>3.2.14</b> <code>get_wordcloud_data</code></a></li>
+<li class="chapter" data-level="3.2.15" data-path="r-functions.html"><a href="r-functions.html#make_forum_barplot"><i class="fa fa-check"></i><b>3.2.15</b> <code>make_forum_barplot</code></a></li>
+<li class="chapter" data-level="3.2.16" data-path="r-functions.html"><a href="r-functions.html#make_forum_breakdown_barplot"><i class="fa fa-check"></i><b>3.2.16</b> <code>make_forum_breakdown_barplot</code></a></li>
+<li class="chapter" data-level="3.2.17" data-path="r-functions.html"><a href="r-functions.html#make_wordcloud"><i class="fa fa-check"></i><b>3.2.17</b> <code>make_wordcloud</code></a></li>
+<li class="chapter" data-level="3.2.18" data-path="r-functions.html"><a href="r-functions.html#set_axis_limit"><i class="fa fa-check"></i><b>3.2.18</b> <code>set_axis_limit</code></a></li>
+<li class="chapter" data-level="3.2.19" data-path="r-functions.html"><a href="r-functions.html#set_breakdown"><i class="fa fa-check"></i><b>3.2.19</b> <code>set_breakdown</code></a></li>
+<li class="chapter" data-level="3.2.20" data-path="r-functions.html"><a href="r-functions.html#set_forum_plot_title"><i class="fa fa-check"></i><b>3.2.20</b> <code>set_forum_plot_title</code></a></li>
+<li class="chapter" data-level="3.2.21" data-path="r-functions.html"><a href="r-functions.html#set_forum_plot_ylabel"><i class="fa fa-check"></i><b>3.2.21</b> <code>set_forum_plot_ylabel</code></a></li>
+<li class="chapter" data-level="3.2.22" data-path="r-functions.html"><a href="r-functions.html#set_forum_threads_title"><i class="fa fa-check"></i><b>3.2.22</b> <code>set_forum_threads_title</code></a></li>
+<li class="chapter" data-level="3.2.23" data-path="r-functions.html"><a href="r-functions.html#set_wordcloud_title"><i class="fa fa-check"></i><b>3.2.23</b> <code>set_wordcloud_title</code></a></li>
+<li class="chapter" data-level="3.2.24" data-path="r-functions.html"><a href="r-functions.html#specify_forum_data_selection"><i class="fa fa-check"></i><b>3.2.24</b> <code>specify_forum_data_selection</code></a></li>
+<li class="chapter" data-level="3.2.25" data-path="r-functions.html"><a href="r-functions.html#update_forum_data"><i class="fa fa-check"></i><b>3.2.25</b> <code>update_forum_data</code></a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Interactive dashboard for edX MOOC instructors</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="development-journal" class="section level1">
+<h1><span class="header-section-number">2</span> Development Journal</h1>
+<p><em>I began keeping a daily journal on May 9th, which is why the entries before that date are a bit sparse.</em></p>
+<div id="week-1" class="section level2">
+<h2><span class="header-section-number">2.1</span> Week 1</h2>
+<div id="tuesday-april-25" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Tuesday April 25</h3>
+<div id="overview" class="section level4">
+<h4><span class="header-section-number">2.1.1.1</span> Overview:</h4>
+<ul>
+<li>I did some initial exploration of the forum data in the marketing course. In particular, I explored the sentiment of the language used in the forum.</li>
+</ul>
+</div>
+<div id="git-commits" class="section level4">
+<h4><span class="header-section-number">2.1.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/apr_25_2017.png" alt="git commits for april 25" />
+</center>
+</div>
+<div id="updates-to-key-visualizations" class="section level4">
+<h4><span class="header-section-number">2.1.1.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/apr_25_2017_1.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/apr_25_2017_2.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/apr_25_2017_3.png" alt="update to visualization" />
+</center>
+</div>
+</div>
+<div id="wednesday-april-26" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Wednesday April 26</h3>
+<div id="overview-1" class="section level4">
+<h4><span class="header-section-number">2.1.2.1</span> Overview:</h4>
+<ul>
+<li>For the first day of the hackathon, we established some goals and plans.</li>
+<li>We discussed the possibility of sending automated reports rather than creating a dashboard.</li>
+<li>I made a plot of daily active users.</li>
+</ul>
+</div>
+<div id="git-commits-1" class="section level4">
+<h4><span class="header-section-number">2.1.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/apr_26_2017.png" alt="git commits for april 26" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-1" class="section level4">
+<h4><span class="header-section-number">2.1.2.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/apr_26_2017.png" alt="update to visualization" />
+</center>
+</div>
+</div>
+<div id="thursday-april-27" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Thursday April 27</h3>
+</div>
+<div id="overview-2" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Overview:</h3>
+<ul>
+<li>We had more discussions about the ideal way to present information.</li>
+<li>I improved the plot of the forum sentiment.</li>
+</ul>
+<div id="git-commits-2" class="section level4">
+<h4><span class="header-section-number">2.1.4.1</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/apr_27_2017.png" alt="git commits for april 27" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-2" class="section level4">
+<h4><span class="header-section-number">2.1.4.2</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/apr_27_2017.png" alt="update to visualization" />
+</center>
+</div>
+</div>
+</div>
+<div id="week-2" class="section level2">
+<h2><span class="header-section-number">2.2</span> Week 2</h2>
+<div id="monday-may-1" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Monday May 1</h3>
+<div id="overview-3" class="section level4">
+<h4><span class="header-section-number">2.2.1.1</span> Overview:</h4>
+<ul>
+<li>I tried some topic modelling of the forum data, using Latent Dirichlet allocation (LDA), but I found that it was very difficult to get useful and interpretable topics across different courses.</li>
+</ul>
+</div>
+<div id="git-commits-3" class="section level4">
+<h4><span class="header-section-number">2.2.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_01_2017.png" alt="git commits for may 1" />
+</center>
+</div>
+</div>
+<div id="tuesday-may-2" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Tuesday May 2</h3>
+<div id="overview-4" class="section level4">
+<h4><span class="header-section-number">2.2.2.1</span> Overview:</h4>
+<ul>
+<li>I made a first attempt at linking the forum posts with specific categories in the discussion forum.</li>
+</ul>
+</div>
+<div id="git-commits-4" class="section level4">
+<h4><span class="header-section-number">2.2.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_02_2017.png" alt="git commits for may 2" />
+</center>
+</div>
+</div>
+<div id="wednesday-may-3" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Wednesday May 3</h3>
+<div id="overview-5" class="section level4">
+<h4><span class="header-section-number">2.2.3.1</span> Overview:</h4>
+<ul>
+<li>I figured out how to link the forum posts with the categories/subcategories, and made some visualizations of the most-used words.</li>
+</ul>
+</div>
+<div id="git-commits-5" class="section level4">
+<h4><span class="header-section-number">2.2.3.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_03_2017.png" alt="git commits for may 3" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-3" class="section level4">
+<h4><span class="header-section-number">2.2.3.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_03_2017_1.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_03_2017_2.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_03_2017_3.png" alt="update to visualization" />
+</center>
+</div>
+</div>
+<div id="friday-may-5" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> Friday May 5</h3>
+<div id="overview-6" class="section level4">
+<h4><span class="header-section-number">2.2.4.1</span> Overview:</h4>
+<ul>
+<li>I edited and submitted the capstone proposal.</li>
+</ul>
+</div>
+<div id="git-commits-6" class="section level4">
+<h4><span class="header-section-number">2.2.4.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_05_2017.png" alt="git commits for may 5" />
+</center>
+</div>
+</div>
+</div>
+<div id="week-3" class="section level2">
+<h2><span class="header-section-number">2.3</span> Week 3</h2>
+<div id="monday-may-8" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Monday May 8</h3>
+<div id="overview-7" class="section level4">
+<h4><span class="header-section-number">2.3.1.1</span> Overview:</h4>
+<ul>
+<li>Mainly, I prepared for the proposal presentation.</li>
+<li>I also developed an alternative visualization of the most-used words throughout the discussion forum subcategories. It is based on text visualizations made by <a href="https://netlytic.org/home/">Netlytic</a>.</li>
+</ul>
+</div>
+<div id="git-commits-7" class="section level4">
+<h4><span class="header-section-number">2.3.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_08_2017.png" alt="git commits for may 8" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-4" class="section level4">
+<h4><span class="header-section-number">2.3.1.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_08_2017_1.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_08_2017_2.png" alt="update to visualization" />
+</center>
+</div>
+</div>
+<div id="tuesday-may-9" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Tuesday May 9</h3>
+<div id="overview-8" class="section level4">
+<h4><span class="header-section-number">2.3.2.1</span> Overview:</h4>
+<ul>
+<li>I made my forum wrangling code more generalizable across courses, and added filtering functionality to the forum dashboard.</li>
+</ul>
+</div>
+<div id="git-commits-8" class="section level4">
+<h4><span class="header-section-number">2.3.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_09_2017.png" alt="git commits for may 9" />
+</center>
+</div>
+</div>
+<div id="wednesday-may-10" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Wednesday May 10</h3>
+<div id="overview-9" class="section level4">
+<h4><span class="header-section-number">2.3.3.1</span> Overview:</h4>
+<ul>
+<li>I parsed the XML file containing the correct order of the forum elements, and joined that with the JSON file containing the ids of each forum elements.</li>
+<li>I fixed the factor ordering, which took way longer than expected.</li>
+</ul>
+</div>
+<div id="git-commits-9" class="section level4">
+<h4><span class="header-section-number">2.3.3.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_10_2017.png" alt="git commits for may 10" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-5" class="section level4">
+<h4><span class="header-section-number">2.3.3.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_10_2017_1.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_10_2017_2.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_10_2017_3.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priority-for-next-day" class="section level4">
+<h4><span class="header-section-number">2.3.3.4</span> Top priority for next day:</h4>
+<ul>
+<li>Convert code in Rmd to R scripts for automatic preprocessing of forum visualizations.</li>
+</ul>
+</div>
+</div>
+<div id="thursday-may-11" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> Thursday May 11</h3>
+<div id="overview-10" class="section level4">
+<h4><span class="header-section-number">2.3.4.1</span> Overview:</h4>
+<ul>
+<li>As a team, we wrote a Google doc containing data/task abstractions for each visualization.</li>
+<li>As a team, we cleaned up Trello board and reassigned sprint tasks for next week.</li>
+<li>We met with Sarah, who helped us prioritize visualizations.</li>
+<li>I successfully generalized the forum wrangling to Climate Change, Marketing, Useful Genetics, and Creative Writing.</li>
+<li>I converted forum wrangling code into a clean, organized script.</li>
+</ul>
+</div>
+<div id="git-commits-10" class="section level4">
+<h4><span class="header-section-number">2.3.4.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_11_2017.png" alt="git commits for may 11" />
+</center>
+</div>
+<div id="top-priority-for-next-day-1" class="section level4">
+<h4><span class="header-section-number">2.3.4.3</span> Top priority for next day:</h4>
+<ul>
+<li>Get read events for forum sections. Over the weekend:</li>
+<li>Try to remake the forum posts plot in D3.</li>
+<li>Try to prototype a dashboard in D3, if possible.</li>
+<li>Go back through notebook and fill in gaps.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="week-4" class="section level2">
+<h2><span class="header-section-number">2.4</span> Week 4</h2>
+<div id="monday-may-15" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Monday May 15</h3>
+<div id="overview-11" class="section level4">
+<h4><span class="header-section-number">2.4.1.1</span> Overview:</h4>
+<ul>
+<li>We had a long meeting in the morning with Ido and Sarah to pin down the most important plots that need to be made.</li>
+<li>In the afternoon, I worked on getting the number of read events for each discussion category, and then built a prototype of a dashboard for the forum data.</li>
+</ul>
+</div>
+<div id="git-commits-11" class="section level4">
+<h4><span class="header-section-number">2.4.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_15_2017.png" alt="git commits for may 15" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-6" class="section level4">
+<h4><span class="header-section-number">2.4.1.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_15_2017.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day" class="section level4">
+<h4><span class="header-section-number">2.4.1.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Fix cases where there are zero reads/posts for a given category.</li>
+<li>Add wordcloud to dashboard? ### Tuesday May 16 #### Overview:</li>
+<li>I fixed the cases where there are zero reads/posts for a given category.</li>
+<li>I added a wordcloud to the dashboard, and linked it with the discussion subsections.</li>
+<li>I displayed the forum posts in the dashboard (currently no linking or smart ordering). #### Git commits:</li>
+</ul>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_16_2017.png" alt="git commits for may 16" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-7" class="section level4">
+<h4><span class="header-section-number">2.4.1.5</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_16_2017_1.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-1" class="section level4">
+<h4><span class="header-section-number">2.4.1.6</span> Top priorities for next day:</h4>
+<ul>
+<li>Test out the dashboard with other courses.</li>
+<li>Try using Matt’s BigQuery script.</li>
+<li>Re-run database query but include number of likes/pins, so that I can display interesting posts in each discussion category.</li>
+</ul>
+</div>
+</div>
+<div id="wednesday-may-17" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Wednesday May 17</h3>
+<div id="overview-12" class="section level4">
+<h4><span class="header-section-number">2.4.2.1</span> Overview:</h4>
+<ul>
+<li>I redesigned my SQL queries so that the forum data includes the number of upvotes, reads, and dates.</li>
+<li>I wrangled each of the new forum datasets.</li>
+<li>For each course, I loaded the wrangled data into the dashboard.</li>
+<li>I displayed the top forum posts in the dashboard.</li>
+<li>I added an option for reordering the forum subcategories by their rank, which caused a million bugs, most of which I managed to squish.</li>
+</ul>
+</div>
+<div id="git-commits-12" class="section level4">
+<h4><span class="header-section-number">2.4.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_17_2017.png" alt="git commits for may 17" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-8" class="section level4">
+<h4><span class="header-section-number">2.4.2.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_17_2017_1.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_17_2017_2.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-2" class="section level4">
+<h4><span class="header-section-number">2.4.2.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Test my dashboard in the course sandbox.</li>
+<li>Fix bug where the dashboard crashes when the filtered demographics contain no users.</li>
+</ul>
+</div>
+</div>
+<div id="thursday-may-18" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Thursday May 18</h3>
+<div id="overview-13" class="section level4">
+<h4><span class="header-section-number">2.4.3.1</span> Overview:</h4>
+<ul>
+<li>I tested my dashboard in the course sandbox.</li>
+<li>I fixed several bugs related to cases when the filtered demographics contain no users.</li>
+</ul>
+</div>
+<div id="git-commits-13" class="section level4">
+<h4><span class="header-section-number">2.4.3.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_18_2017.png" alt="git commits for may 18" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-9" class="section level4">
+<h4><span class="header-section-number">2.4.3.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_18_2017.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-3" class="section level4">
+<h4><span class="header-section-number">2.4.3.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Get feedback from everyone on the forum dashboard.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="week-5" class="section level2">
+<h2><span class="header-section-number">2.5</span> Week 5</h2>
+<div id="tuesday-may-23" class="section level3">
+<h3><span class="header-section-number">2.5.1</span> Tuesday May 23</h3>
+<div id="overview-14" class="section level4">
+<h4><span class="header-section-number">2.5.1.1</span> Overview:</h4>
+<ul>
+<li>I made a few tweaks to the forum dashboard, republished it, and sent it to Ido for feedback.</li>
+<li>Much of my day got derailed by the STAT teaching presentation and lunch, which occupied me from 10:45am to around 2:00pm.</li>
+</ul>
+</div>
+<div id="git-commits-14" class="section level4">
+<h4><span class="header-section-number">2.5.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_23_2017.png" alt="git commits for may 23" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-10" class="section level4">
+<h4><span class="header-section-number">2.5.1.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_18_2017.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-4" class="section level4">
+<h4><span class="header-section-number">2.5.1.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Work with Matt to get the BigQuery script working.</li>
+<li>Determine my next major tasks.</li>
+<li>(Possibly work on displaying the selected subcategory on the main plot?)</li>
+</ul>
+</div>
+</div>
+<div id="wednesday-may-24" class="section level3">
+<h3><span class="header-section-number">2.5.2</span> Wednesday May 24</h3>
+<div id="overview-15" class="section level4">
+<h4><span class="header-section-number">2.5.2.1</span> Overview:</h4>
+<ul>
+<li>Matt wasn’t in today, so I couldn’t work with him to get the BigQuery script working.</li>
+<li>I tested out my code on a few more courses.</li>
+<li>I tried to download all the data for the marketing course, but ran into an authorization issue with BigQuery, so I asked Ido and Sarah what to do – no response yet.</li>
+<li>I spent a few hours in the afternoon trying to access the video transcripts, to no avail.</li>
+</ul>
+</div>
+<div id="git-commits-15" class="section level4">
+<h4><span class="header-section-number">2.5.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_24_2017.png" alt="git commits for may 24" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-5" class="section level4">
+<h4><span class="header-section-number">2.5.2.3</span> Top priorities for next day:</h4>
+<ul>
+<li>Get feedback from Sarah on forum view of dashboard.</li>
+<li>Try out the shiny dashboard in Azure.</li>
+</ul>
+</div>
+</div>
+<div id="thursday-may-25" class="section level3">
+<h3><span class="header-section-number">2.5.3</span> Thursday May 25</h3>
+<div id="overview-16" class="section level4">
+<h4><span class="header-section-number">2.5.3.1</span> Overview:</h4>
+<ul>
+<li>I got feedback from Sarah on my forum dashboard.</li>
+<li>I went out for lunch with the UX designer at Thinkific, and got some advice.</li>
+<li>I had a bad headache, so I had to end the day early.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="week-6" class="section level2">
+<h2><span class="header-section-number">2.6</span> Week 6</h2>
+<div id="monday-may-29" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> Monday May 29</h3>
+<div id="overview-17" class="section level4">
+<h4><span class="header-section-number">2.6.1.1</span> Overview:</h4>
+<ul>
+<li>We spent most of the morning in a meeting with Ido, Sarah, and two of the learning analytics people at UBC. We showed them what we’ve made so far, and got some feedback. They seemed quite pleased with our progress so far.</li>
+<li>In the afternoon, I worked with Matt to get the BigQuery script working, and it is now functional. This was a major step forward, as I can now use the full dataset for a given course.</li>
+<li>I tested the forum view of the dashboard with the full data for the marketing course; it loads and updates slower than I’d like, but it’s definitely functional.</li>
+<li>I made a few minor changes to the forum view, as per feedback from Ido and Sarah.</li>
+</ul>
+</div>
+<div id="git-commits-16" class="section level4">
+<h4><span class="header-section-number">2.6.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_29_2017.png" alt="git commits for may 29" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-6" class="section level4">
+<h4><span class="header-section-number">2.6.1.3</span> Top priorities for next day:</h4>
+<ul>
+<li>Get the forum view working for the psychology course.</li>
+<li>Add additional filtering options.</li>
+<li>Start scheduling user-testing.</li>
+<li>Write paragraph to describe our presentation to LAVA group.</li>
+</ul>
+</div>
+</div>
+<div id="tuesday-may-30" class="section level3">
+<h3><span class="header-section-number">2.6.2</span> Tuesday May 30</h3>
+<div id="overview-18" class="section level4">
+<h4><span class="header-section-number">2.6.2.1</span> Overview:</h4>
+<ul>
+<li>I wrote the description of our LAVA presentation, and sent it to Ido.</li>
+<li>I got the forum view working for the psychology course.</li>
+<li>I added two new filtering options: age, and activity level.</li>
+<li>I asked Ido and Sarah about scheduling user-testing.</li>
+</ul>
+</div>
+<div id="git-commits-17" class="section level4">
+<h4><span class="header-section-number">2.6.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_30_2017.png" alt="git commits for may 30" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-11" class="section level4">
+<h4><span class="header-section-number">2.6.2.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_30_2017.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-7" class="section level4">
+<h4><span class="header-section-number">2.6.2.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Write user-testing protocol.</li>
+</ul>
+</div>
+</div>
+<div id="wednesday-may-31" class="section level3">
+<h3><span class="header-section-number">2.6.3</span> Wednesday May 31</h3>
+<div id="overview-19" class="section level4">
+<h4><span class="header-section-number">2.6.3.1</span> Overview:</h4>
+<ul>
+<li>I removed language filtering, and fixed the size and font of the wordcloud title. I also added a tooltip to the forum posts dropdown.</li>
+<li>I wrote a draft of the user-testing protocol.</li>
+</ul>
+</div>
+<div id="git-commits-18" class="section level4">
+<h4><span class="header-section-number">2.6.3.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/may_31_2017.png" alt="git commits for may 31" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-12" class="section level4">
+<h4><span class="header-section-number">2.6.3.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/may_31_2017.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-8" class="section level4">
+<h4><span class="header-section-number">2.6.3.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Add help buttons and pop-ups.</li>
+<li>Add language filtering.</li>
+<li>Create a Google Sheets template for collecting feedback from user-testing sessions.</li>
+<li>Investigate R package/module creation options.</li>
+</ul>
+</div>
+</div>
+<div id="thursday-june-1" class="section level3">
+<h3><span class="header-section-number">2.6.4</span> Thursday June 1</h3>
+<div id="overview-20" class="section level4">
+<h4><span class="header-section-number">2.6.4.1</span> Overview:</h4>
+<ul>
+<li>We had our first user-testing session this morning. It went pretty well, but it also made it clear that several changes were required for the forum view. We spent a fair bit of time talking as a team about all the improvements that needed to be done.</li>
+<li>I spent many hours in the evening trying to implement some seemingly simple changes, but had a lot of trouble with bugs in plotly. I ended up updating shiny, plotly, and ggplot, which introduced new bugs in plotly, so I think I’m stuck with ggplot now. So now I’m trying to remember how to get a click event to stay updated, and not reset to NULL. It’s been very frustrating.</li>
+</ul>
+</div>
+<div id="git-commits-19" class="section level4">
+<h4><span class="header-section-number">2.6.4.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_02_2017.png" alt="git commits for june 01" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-13" class="section level4">
+<h4><span class="header-section-number">2.6.4.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_01_2017.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-9" class="section level4">
+<h4><span class="header-section-number">2.6.4.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Continue working on click events problem.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="week-7" class="section level2">
+<h2><span class="header-section-number">2.7</span> Week 7</h2>
+<div id="monday-june-5-and-weekend" class="section level3">
+<h3><span class="header-section-number">2.7.1</span> Monday June 5 (and weekend)</h3>
+<div id="overview-21" class="section level4">
+<h4><span class="header-section-number">2.7.1.1</span> Overview:</h4>
+<ul>
+<li>I worked many hours over the weekend to come up with a new solution for aggregating and displaying the data using ggplot. I think it was for the better; it should now be much clearer to the user what level of aggregation they’re viewing, and also which category has been selected.</li>
+<li>This morning I had a meeting with Letitia to get feedback on our user-testing protocol, which was helpful. In the afternoon we had a meeting with Derek and Pan to discuss deployment, and then after that we had another usability test with three TAs for the course on Systematic Program Design.</li>
+<li>In the evening, I implemented some changes that were shown to be necessary during the usability test.</li>
+</ul>
+</div>
+<div id="git-commits-20" class="section level4">
+<h4><span class="header-section-number">2.7.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_05_2017.png" alt="git commits for june 05" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_03_2017.png" alt="git commits for june 03" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-14" class="section level4">
+<h4><span class="header-section-number">2.7.1.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_05_2017.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-10" class="section level4">
+<h4><span class="header-section-number">2.7.1.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Write down Letitia’s suggestions for the dashboard.</li>
+<li>Starting writing the full documentation for my wrangling pipeline.</li>
+</ul>
+</div>
+</div>
+<div id="tuesday-june-6" class="section level3">
+<h3><span class="header-section-number">2.7.2</span> Tuesday June 6</h3>
+<div id="overview-22" class="section level4">
+<h4><span class="header-section-number">2.7.2.1</span> Overview:</h4>
+<ul>
+<li>We had another full day of meetings, and I had a bit of time in the evening to clean up my dashboard appearance a little bit more. I ditched click interactions because they were causing too much trouble and nobody was using them. I also move the category filter down to the main plot panel, and made the logic of the category/subcategory hierarchy more obvious. I also added author counts, and truncated the thread text.</li>
+<li>I also discovered a bit of an oversight with regard to the hierarchy of the posts themselves. I realized that when I was filtering by a subcategory, I was only getting initial posts, not response posts or comments (whereas when all categories were selected, I was getting everything). I will have to revisit my wrangling/SQL scripts so that I can infer the commentable_id for the response posts and the comments.</li>
+</ul>
+</div>
+<div id="git-commits-21" class="section level4">
+<h4><span class="header-section-number">2.7.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_06_2017.png" alt="git commits for june 06" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-15" class="section level4">
+<h4><span class="header-section-number">2.7.2.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_06_2017_1.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_06_2017_2.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-11" class="section level4">
+<h4><span class="header-section-number">2.7.2.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Revisit the wrangling/SQL scripts and see if I can infer the commentable_id in a smart and easy way</li>
+<li>Start mapping out a plan for documentation of my wrangling script and my server/ui. Also look at Matt’s code so that I can organize the shiny code into modules.</li>
+</ul>
+</div>
+</div>
+<div id="wednesday-june-7" class="section level3">
+<h3><span class="header-section-number">2.7.3</span> Wednesday June 7</h3>
+<div id="overview-23" class="section level4">
+<h4><span class="header-section-number">2.7.3.1</span> Overview:</h4>
+<ul>
+<li>We gave our presentation to the LAVA group today, and it went very well. We got some valuable feedback, and most of the suggestions were for minor changes.</li>
+<li>I started mapping out the hierarchy of the forum data today, and rewrote the SQL query for the forum_posts query, though I haven’t tested it yet. Once I get this data in the new form, I think it will be pretty easy to infer the commentable IDs of each response post and comment.</li>
+</ul>
+</div>
+<div id="git-commits-22" class="section level4">
+<h4><span class="header-section-number">2.7.3.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_07_2017.png" alt="git commits for june 07" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-12" class="section level4">
+<h4><span class="header-section-number">2.7.3.3</span> Top priorities for next day:</h4>
+<ul>
+<li>Rewrite the forum_views SQL script so that I can infer the commentable_id of every view, and then (if time) incorporate this into the wrangling script.</li>
+</ul>
+</div>
+</div>
+<div id="thursday-june-8" class="section level3">
+<h3><span class="header-section-number">2.7.4</span> Thursday June 8</h3>
+<div id="overview-24" class="section level4">
+<h4><span class="header-section-number">2.7.4.1</span> Overview:</h4>
+<ul>
+<li>I had a very productive day (and night). I rewrote the sql scripts, rewrote the wrangling scripts, and updated the dashboard to incorporate the different types of forum posts. It ended up being relatively complicated, but I think it’s at the point now where it’s reasonably robust.</li>
+</ul>
+</div>
+<div id="git-commits-23" class="section level4">
+<h4><span class="header-section-number">2.7.4.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_08_2017.png" alt="git commits for june 08" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-16" class="section level4">
+<h4><span class="header-section-number">2.7.4.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_08_2017_1.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_08_2017_2.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-13" class="section level4">
+<h4><span class="header-section-number">2.7.4.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Documentation and testing.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="week-8" class="section level2">
+<h2><span class="header-section-number">2.8</span> Week 8</h2>
+<div id="monday-june-12" class="section level3">
+<h3><span class="header-section-number">2.8.1</span> Monday June 12</h3>
+<div id="overview-25" class="section level4">
+<h4><span class="header-section-number">2.8.1.1</span> Overview:</h4>
+<ul>
+<li>I made some minor changes to the forum dashboard, and otherwise spent most of my time shuffling files and functions around to get them in the right locations for the release of the R package.</li>
+<li>I read up on testing in R, and I set up a template file where I can write my unit tests, but I’m holding off on the tests themselves until we’ve all decided what course to use for our sample dataset, because I’m going to have to create some fake data.</li>
+</ul>
+</div>
+<div id="git-commits-24" class="section level4">
+<h4><span class="header-section-number">2.8.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_12_2017.png" alt="git commits for june 12" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-17" class="section level4">
+<h4><span class="header-section-number">2.8.1.3</span> Updates to key visualizations:</h4>
+<ul>
+<li>I italicized the category/subcategory names in the plot titles.</li>
+</ul>
+</div>
+<div id="top-priorities-for-next-day-14" class="section level4">
+<h4><span class="header-section-number">2.8.1.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Create a detailed diagram of the forum data pipeline.</li>
+</ul>
+</div>
+</div>
+<div id="tuesday-june-13" class="section level3">
+<h3><span class="header-section-number">2.8.2</span> Tuesday June 13</h3>
+<div id="overview-26" class="section level4">
+<h4><span class="header-section-number">2.8.2.1</span> Overview:</h4>
+<ul>
+<li>Today I mainly worked on creating diagrams to help explain the hierarchy of the discussion forum and the forum data cleaning pipeline.</li>
+<li>I also wrote an R wrapper for running bash scripts, and did a bit of reading about deploying to Azure.</li>
+</ul>
+</div>
+<div id="git-commits-25" class="section level4">
+<h4><span class="header-section-number">2.8.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_13_2017.png" alt="git commits for june 13" />
+</center>
+</div>
+<div id="updates-to-key-visualizations-18" class="section level4">
+<h4><span class="header-section-number">2.8.2.3</span> Updates to key visualizations:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_13_2017_1.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_13_2017_2.png" alt="update to visualization" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/visualizations/jun_13_2017_3.png" alt="update to visualization" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-15" class="section level4">
+<h4><span class="header-section-number">2.8.2.4</span> Top priorities for next day:</h4>
+<ul>
+<li>Write tests for most-used functions.</li>
+</ul>
+</div>
+</div>
+<div id="wednesday-june-14" class="section level3">
+<h3><span class="header-section-number">2.8.3</span> Wednesday June 14</h3>
+<div id="overview-27" class="section level4">
+<h4><span class="header-section-number">2.8.3.1</span> Overview:</h4>
+<ul>
+<li>I made sample CSVs for forum_posts, forum_views, and forum_searches.</li>
+<li>I added the forum module and server to the global dashboard.</li>
+<li>I wrote tests for three of the functions in the forum wrangling script.</li>
+</ul>
+</div>
+<div id="git-commits-26" class="section level4">
+<h4><span class="header-section-number">2.8.3.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_14_2017.png" alt="git commits for june 14" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-16" class="section level4">
+<h4><span class="header-section-number">2.8.3.3</span> Top priorities for next day:</h4>
+<ul>
+<li>Continue writing tests.</li>
+</ul>
+</div>
+</div>
+<div id="thursday-june-15" class="section level3">
+<h3><span class="header-section-number">2.8.4</span> Thursday June 15</h3>
+<div id="overview-28" class="section level4">
+<h4><span class="header-section-number">2.8.4.1</span> Overview:</h4>
+<ul>
+<li>Today ended up being a day of bug fixing, since there were a whole bunch of unexpected complications with rendering the forum view as its own UI.</li>
+<li>I’m currently stuck trying to update the selectInput for the subcategory when the category changes. I’m genuinely unsure about how to fix it.</li>
+</ul>
+</div>
+<div id="git-commits-27" class="section level4">
+<h4><span class="header-section-number">2.8.4.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_15_2017.png" alt="git commits for june 15" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-17" class="section level4">
+<h4><span class="header-section-number">2.8.4.3</span> Top priorities for next day:</h4>
+<ul>
+<li>Fix the shiny modules + selectInput problem.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="week-8-1" class="section level2">
+<h2><span class="header-section-number">2.9</span> Week 8</h2>
+<div id="monday-june-19-and-weekend" class="section level3">
+<h3><span class="header-section-number">2.9.1</span> Monday June 19 (and weekend)</h3>
+<div id="overview-29" class="section level4">
+<h4><span class="header-section-number">2.9.1.1</span> Overview:</h4>
+<ul>
+<li>Over the weekend, I fixed the shiny modules + selectInput problem that arose when we all combined our dashboards into a single dashboard. I also wrote tests for all my wrangling functions, and for most of my server functions.</li>
+<li>Today, I finished writing tests for my server functions, and then spent most of the afternoon learning how bookdown works, for a nicer presentation of my notebook and final report.</li>
+<li>I also briefly explored the <code>packagedocs</code> package, which I think we can use to automatically create a website using github pages to host all our documentation. It can also be integrated with TravisCI.</li>
+</ul>
+</div>
+<div id="git-commits-28" class="section level4">
+<h4><span class="header-section-number">2.9.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_19_2017.png" alt="git commits for june 19" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_18_2017.png" alt="git commits for june 18" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_17_2017.png" alt="git commits for june 17" />
+</center>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_16_2017.png" alt="git commits for june 16" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-18" class="section level4">
+<h4><span class="header-section-number">2.9.1.3</span> Top priorities for next day:</h4>
+<ul>
+<li>Get a <code>packagedocs</code> website up and running for our documentation.</li>
+<li>Include all my code in this book.</li>
+</ul>
+</div>
+</div>
+<div id="tuesday-june-20" class="section level3">
+<h3><span class="header-section-number">2.9.2</span> Tuesday June 20</h3>
+<div id="overview-30" class="section level4">
+<h4><span class="header-section-number">2.9.2.1</span> Overview:</h4>
+<ul>
+<li>Today I mainly worked on including function documentation in this report.</li>
+<li>I didn’t get a <code>packagedocs</code> website up, because I didn’t have time to coordinate with Andrew, but we should be able to do that tomorrow or Thursday.</li>
+</ul>
+</div>
+<div id="git-commits-29" class="section level4">
+<h4><span class="header-section-number">2.9.2.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_20_2017.png" alt="git commits for june 20" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-19" class="section level4">
+<h4><span class="header-section-number">2.9.2.3</span> Top priorities for next day:</h4>
+<ul>
+<li>Do a really good job of presenting our dashboard to the CTLT.</li>
+<li>Try to get a <code>packagedocs</code> website up.</li>
+</ul>
+</div>
+</div>
+<div id="wednesday-june-21" class="section level3">
+<h3><span class="header-section-number">2.9.3</span> Wednesday June 21</h3>
+<div id="overview-31" class="section level4">
+<h4><span class="header-section-number">2.9.3.1</span> Overview:</h4>
+</div>
+<div id="git-commits-30" class="section level4">
+<h4><span class="header-section-number">2.9.3.2</span> Git commits:</h4>
+</div>
+<div id="updates-to-key-visualizations-19" class="section level4">
+<h4><span class="header-section-number">2.9.3.3</span> Updates to key visualizations:</h4>
+</div>
+<div id="top-priorities-for-next-day-20" class="section level4">
+<h4><span class="header-section-number">2.9.3.4</span> Top priorities for next day:</h4>
+</div>
+</div>
+<div id="thursday-june-22" class="section level3">
+<h3><span class="header-section-number">2.9.4</span> Thursday June 22</h3>
+<div id="overview-32" class="section level4">
+<h4><span class="header-section-number">2.9.4.1</span> Overview:</h4>
+<ul>
+<li>We gave a presentation to the CTLT today, and then went out for lunch with Ido and Sarah.</li>
+<li>In the afternoon we attended a learning analytics presentation that Ido and Leah were giving. There wasn’t much time left for work after that.</li>
+</ul>
+</div>
+<div id="top-priorities-for-next-day-21" class="section level4">
+<h4><span class="header-section-number">2.9.4.2</span> Top priorities for next day:</h4>
+<ul>
+<li>Fix the bug in the responses/comments counts.</li>
+<li>Documentation.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="week-9" class="section level2">
+<h2><span class="header-section-number">2.10</span> Week 9</h2>
+<div id="monday-june-26" class="section level3">
+<h3><span class="header-section-number">2.10.1</span> Monday June 26</h3>
+<div id="overview-33" class="section level4">
+<h4><span class="header-section-number">2.10.1.1</span> Overview:</h4>
+<ul>
+<li>Because of a change that Matt made, which will allow us to host multiple courses on one server, I had to change a few things in my forum server module. Namely, I had to read in the csvs as reactive files. This didn’t take too long.</li>
+<li>The bulk of my day, i.e. 11:30am to 11:00pm, was spent trying to fix a nasty bug that I found yesterday morning before the presentation. The number of responses and comments in the threads table wasn’t matching the numbers shown in the main barplot. I eventually figured it out.</li>
+</ul>
+</div>
+<div id="git-commits-31" class="section level4">
+<h4><span class="header-section-number">2.10.1.2</span> Git commits:</h4>
+<center>
+<img src="/Users/davidlaing/Desktop/capstone/DSCI_591_notebook_laing_david/img/git_commits/jun_22_2017.png" alt="git commits for june 22" />
+</center>
+</div>
+<div id="top-priorities-for-next-day-22" class="section level4">
+<h4><span class="header-section-number">2.10.1.3</span> Top priorities for next day:</h4>
+<ul>
+<li>Replace forum titles with forum text, as per Ido’s request.</li>
+<li>Write a paragraph to explain the forum hierarchy.</li>
+<li>Write a paragraph to explain the the forum wrangling.</li>
+<li>Write 2-3 paragraphs to justify the visualizations.</li>
+<li>Compile all this documentation in the R package.</li>
+</ul>
+</div>
+</div>
+<div id="tuesday-june-27" class="section level3">
+<h3><span class="header-section-number">2.10.2</span> Tuesday June 27</h3>
+<div id="overview-34" class="section level4">
+<h4><span class="header-section-number">2.10.2.1</span> Overview:</h4>
+</div>
+<div id="git-commits-32" class="section level4">
+<h4><span class="header-section-number">2.10.2.2</span> Git commits:</h4>
+</div>
+<div id="updates-to-key-visualizations-20" class="section level4">
+<h4><span class="header-section-number">2.10.2.3</span> Updates to key visualizations:</h4>
+</div>
+<div id="top-priorities-for-next-day-23" class="section level4">
+<h4><span class="header-section-number">2.10.2.4</span> Top priorities for next day:</h4>
+</div>
+</div>
+<div id="wednesday-june-28" class="section level3">
+<h3><span class="header-section-number">2.10.3</span> Wednesday June 28</h3>
+<div id="overview-35" class="section level4">
+<h4><span class="header-section-number">2.10.3.1</span> Overview:</h4>
+</div>
+<div id="git-commits-33" class="section level4">
+<h4><span class="header-section-number">2.10.3.2</span> Git commits:</h4>
+</div>
+<div id="updates-to-key-visualizations-21" class="section level4">
+<h4><span class="header-section-number">2.10.3.3</span> Updates to key visualizations:</h4>
+</div>
+<div id="top-priorities-for-next-day-24" class="section level4">
+<h4><span class="header-section-number">2.10.3.4</span> Top priorities for next day:</h4>
+</div>
+</div>
+<div id="thursday-june-29" class="section level3">
+<h3><span class="header-section-number">2.10.4</span> Thursday June 29</h3>
+<div id="overview-36" class="section level4">
+<h4><span class="header-section-number">2.10.4.1</span> Overview:</h4>
+</div>
+<div id="git-commits-34" class="section level4">
+<h4><span class="header-section-number">2.10.4.2</span> Git commits:</h4>
+</div>
+<div id="updates-to-key-visualizations-22" class="section level4">
+<h4><span class="header-section-number">2.10.4.3</span> Updates to key visualizations:</h4>
+</div>
+<div id="top-priorities-for-next-day-25" class="section level4">
+<h4><span class="header-section-number">2.10.4.4</span> Top priorities for next day:</h4>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
